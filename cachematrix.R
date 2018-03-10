@@ -50,7 +50,7 @@ cacheSolve <- function(x, ...) {
     
     # If the cache is null then compute the inverse matrix, set it in the cache, and return it.
     data <- x$get()
-    inv <- solve(data)
+    inv <- solve(data, ...)
     x$setInverse(inv)
     inv
 }
